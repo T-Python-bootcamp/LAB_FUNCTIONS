@@ -1,4 +1,4 @@
-def func(num):
+def func(num:int):
     List = list(range(1,num+1))
     List.reverse()
     while List:
