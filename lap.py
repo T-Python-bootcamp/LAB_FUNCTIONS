@@ -1,15 +1,29 @@
 
 
 def number_format(num):
-    num_range = range(1, num+1)
-    while num:
-        # global num_range
-        for n in num_range:
-            if(n <= num):
-                print(n)
-            else:
-                num = num - 1
-                break
+
+    # First solution
+    result = ""
+    for num in range(num, 0, -1):
+        for n in range(num, 0, -1):
+            result += f"{n} "
+        print(result)
+        result = ""
+
+    # Second solution
+    # lest = list(range(1, num+1))
+    # ....
+
+    # Third solution
+    # outer = num
+    # while(outer > 0):
+    #     inner = outer
+    #     rowResult = ''
+    #     while(inner > 0):
+    #         rowResult += "{} ".format(str(inner))
+    #         inner -= 1
+    #     print(rowResult)
+    #     outer -= 1
 
 
 number_format(5)
